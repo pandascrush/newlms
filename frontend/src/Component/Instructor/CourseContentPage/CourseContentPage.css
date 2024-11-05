@@ -1,0 +1,22 @@
+.custom-btn {
+    background-color: #001040;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .custom-btn:hover {
+    background-color: #002080;
+    border-color: #ffffff;
+    color: #ffffff;
+    transform: translateY(-3px);
+  }
+  
+  .custom-btn:active {
+    transform: translateY(1px);
+  }
+  

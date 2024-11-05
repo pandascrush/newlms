@@ -1,0 +1,31 @@
+[{
+    "title":"HTML",
+    "progress":90,
+    "image":"https://img.freepik.com/free-photo/3d-rendering-kid-playing-digital-game_23-2150898496.jpg?t=st=1718884804~exp=1718888404~hmac=3806f6b24e4eaa7e53703f45cab2bb694faa70009cc0266e6e412b0fcb32045c&w=740"
+},
+{
+    "title":"CSS",
+    "progress":80,
+      "image":"https://img.freepik.com/free-photo/3d-rendering-kid-playing-digital-game_23-2150898496.jpg?t=st=1718884804~exp=1718888404~hmac=3806f6b24e4eaa7e53703f45cab2bb694faa70009cc0266e6e412b0fcb32045c&w=740"
+},
+{
+    "title":"JS",
+    "progress":50,
+     "image":"https://img.freepik.com/free-photo/3d-rendering-kid-playing-digital-game_23-2150898496.jpg?t=st=1718884804~exp=1718888404~hmac=3806f6b24e4eaa7e53703f45cab2bb694faa70009cc0266e6e412b0fcb32045c&w=740"
+},
+{
+    "title":"Python",
+    "progress":50,
+     "image":"https://img.freepik.com/free-photo/3d-rendering-kid-playing-digital-game_23-2150898496.jpg?t=st=1718884804~exp=1718888404~hmac=3806f6b24e4eaa7e53703f45cab2bb694faa70009cc0266e6e412b0fcb32045c&w=740"
+},
+{
+    "title":"Node",
+    "progress":50,
+     "image":"https://img.freepik.com/free-photo/3d-rendering-kid-playing-digital-game_23-2150898496.jpg?t=st=1718884804~exp=1718888404~hmac=3806f6b24e4eaa7e53703f45cab2bb694faa70009cc0266e6e412b0fcb32045c&w=740"
+},
+{
+    "title":"Devops",
+    "progress":50,
+    "image":"https://img.freepik.com/free-photo/3d-rendering-kid-playing-digital-game_23-2150898496.jpg?t=st=1718884804~exp=1718888404~hmac=3806f6b24e4eaa7e53703f45cab2bb694faa70009cc0266e6e412b0fcb32045c&w=740"
+}
+]

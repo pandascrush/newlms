@@ -1,0 +1,19 @@
+.star-rating {
+    display: flex;
+  }
+  
+  .star {
+    font-size: 30px;
+    color: grey;    
+  }
+  
+  .star.filled {
+    color: gold; 
+  }
+
+
+
+
+
+
+

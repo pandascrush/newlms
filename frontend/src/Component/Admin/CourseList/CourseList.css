@@ -1,0 +1,173 @@
+.bgfullpath {
+    height: 100vh;
+  }
+  
+  option {
+    border: none !important;
+  }
+  
+  .courselist-container {
+    position: relative; /* Ensure the button is positioned relative to this container */
+    padding: 20px;
+  }
+  
+  .heading-center {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .text-start {
+    text-align: left;
+  }
+  
+  .course-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .course-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .inner-card {
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .course-image-card {
+    text-align: center;
+  }
+  
+  .course-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .course-title {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  /* Course Details Card */
+  .course-details-card {
+    text-align: left;
+  }
+  
+  .details-heading {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .details-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  
+  /* User Stats Card */
+  .user-stats-card {
+    text-align: left;
+  }
+  
+  .stats-heading {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .stats-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  
+  /* User Table Container */
+  .user-table-container {
+    width: 100%;
+    margin-top: 40px; /* Space between course cards and table */
+  }
+  
+  /* User Table */
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 16px; /* Default font size */
+  }
+  
+  /* Table Headers */
+  .user-table th,
+  .user-table td {
+    border: 1px solid #ddd; /* Border around each cell */
+    padding: 12px 15px; /* Padding inside each cell */
+    text-align: left; /* Align text to the left */
+  }
+  
+  /* Header Styling */
+  .user-table th {
+    background-color: #001040; /* Dark blue background for headers */
+    font-size: 15px; /* Font size for headers */
+  }
+  
+  /* Remove Zebra Striping for Table Rows */
+  /* Commented out the zebra striping effect */
+  /*
+  .user-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light grey background for even rows */
+  /* } */
+  
+  /* Responsive Styles for Table */
+  @media (max-width: 768px) {
+    .course-card {
+      grid-template-columns: 1fr;
+    }
+  
+    .user-table {
+      font-size: 14px; /* Smaller font size on smaller screens */
+    }
+  
+    .user-table th,
+    .user-table td {
+      padding: 10px; /* Less padding on smaller screens */
+    }
+  }
+  
+  .user-list-button {
+    position: absolute; /* Position the button absolutely */
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    padding: 10px 20px; /* Button padding */
+    background-color: #001040; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    z-index: 10; /* Ensure it's on top */
+  }
+  
+  /* Add hover effect for the button */
+  .user-list-button:hover {
+    background-color: #001040; /* Darker shade on hover */
+  }
+  
+  /* Active and Inactive Row Colors */
+  .active-user-row {
+    background-color: #d4edda; /* Light green background for active users */
+  }
+  
+  .inactive-user-row {
+    background-color: #f8d7da; /* Light red background for inactive users */
+  }
+  
+  /* Additional styles for other elements remain the same */
+  

@@ -1,0 +1,38 @@
+.file-upload-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  /* padding: 10px; */
+  border: 2px solid #ddd;
+  border-radius: 5px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f6f7f8; 
+    border: 0px;
+  transition: background-color 0.3s ease;
+}
+
+.file-upload-container:hover {
+  background-color: #e2e6ea;
+}
+
+.file-upload-container label {
+  margin-right: 10px;
+}
+
+.image-preview {
+  margin-top: 20px;
+}
+
+.img-preview {
+  max-width: 300px; /* Set the desired width */
+  max-height: 200px; /* Set the desired height */
+  object-fit: cover; /* Ensure the image covers the area */
+}
+.bgcards {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f6f7f8; 
+  border: 0px;
+}
+a {
+  text-decoration: none !important;
+}

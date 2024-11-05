@@ -1,0 +1,45 @@
+.lessoncard{
+    background-color: white;
+    color: #001040;
+    text-align: left !important;
+    box-shadow: 1px 1px 10px 1px #d4e6ef;
+}
+.logbutton{
+    background-color: #001040;
+    color: #fff;
+}
+.lesson{
+    max-height: 250px;
+}
+
+.arrowclr,.clrcrd{
+    color: #001040;
+}
+
+@media (max-width:425px){
+    .lesson{
+        max-height: 150px;
+        max-width: 250px;
+    }
+    .lessonview{
+        display: flex;
+        flex-direction: column;
+    } 
+}
+@media (min-width:426px) and (max-width:768px){
+    .lesson{
+        height: 150px;
+    } 
+}
+
+@media (min-width:769px){
+    .lesson{
+        height: 170px;
+        width: 270px;
+    } 
+    .lessonview{
+        display: flex;
+        flex-direction: row;
+        color: #001040;
+    }
+}

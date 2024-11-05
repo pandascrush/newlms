@@ -1,0 +1,34 @@
+{
+  "quiz": [
+    {
+      "question": "What is the capital of France?",
+      "options": [
+        {
+          "option": "Paris",
+          "image": "https://example.com/images/paris.jpg",
+          "isCorrect": true
+        },
+        {
+          "option": "London",
+          "image": "https://example.com/images/london.jpg",
+          "isCorrect": false
+        },
+        {
+          "option": "Berlin",
+          "image": "https://example.com/images/berlin.jpg",
+          "isCorrect": false
+        },
+        {
+          "option": "Madrid",
+          "image": "https://example.com/images/madrid.jpg",
+          "isCorrect": false
+        },
+        {
+          "option": "Rome",
+          "image": "https://example.com/images/rome.jpg",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}

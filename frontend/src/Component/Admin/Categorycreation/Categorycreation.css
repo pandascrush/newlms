@@ -1,0 +1,21 @@
+.crdcolorforcard{
+    background-color: #DDC5EF !important;
+    box-shadow: 0 4px 8px rgba(39, 3, 137, 0.1), 0 6px 20px rgba(163, 138, 138, 0.1);
+    border: 0px !important;
+}
+.plusbtn{
+    background-color: rgb(5, 5, 62);
+    border-radius: 30px;
+}
+.plusbtn:hover{
+    background-color: rgb(5, 5, 62);
+    border-radius: 30px;
+}
+.btnaddcategory{
+    background-color: #8c2d52;
+}
+
+.btnaddcategory:hover{
+    background-color: #8c2d52;
+    transform: scale(1.1,1.1);
+}

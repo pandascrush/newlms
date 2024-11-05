@@ -1,0 +1,23 @@
+.certificatebg{
+    color:  #001040;
+    background-color: #d4e6ef;
+
+}
+.certificatepara{
+    font-weight: 600;
+}
+.downloadtext{
+    color:  #001040;
+    font-weight: 500;
+}
+
+
+@media (min-width:1000px){
+    .certificatebg{
+        color:  #001040;
+        background-color: #d4e6ef;
+        margin: 0px 250px !important;
+        padding: 50px;
+       
+    }    
+}

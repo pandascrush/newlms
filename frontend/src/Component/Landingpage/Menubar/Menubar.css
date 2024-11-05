@@ -1,0 +1,82 @@
+
+
+.navbar-brand {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.nav-icon {
+  color: white;
+  margin-left: 15px;
+  font-size: 1.2rem;
+}
+
+.input-group {
+  max-width: 300px;
+}
+
+.input-group .form-control {
+  border-radius: 0;
+}
+
+.input-group-text {
+  background-color: #841ECC;
+  border: none;
+  color: #999;
+}
+
+@media (max-width: 991px) {
+  .input-group {
+    width: 100%;
+  }
+}
+.navbarbgcolour{
+  background-color: #841ECC;
+  color: white;
+}
+
+.box{
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  padding: 10px 20px;
+  background-color: white;
+  border-radius: 30px;
+  align-items: center;
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
+}
+
+.box input{
+  width: 0;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  transition: 0.8s;
+  background: transparent;
+}
+.box:hover input{
+  width:200px
+}
+
+.box a .fas{
+  background-color: #841ECC;  
+}
+
+
+@media (max-width:1000px){
+  .box{
+    width: 100px;
+  }
+  .box:hover input{
+    width:100px
+  }
+}
+
+
+
+

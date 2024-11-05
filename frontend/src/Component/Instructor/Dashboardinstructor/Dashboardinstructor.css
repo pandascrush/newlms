@@ -1,0 +1,15 @@
+.dashboard-container {
+    display: flex;
+  }
+  
+  .dashboard-content {
+    transition: margin-left 1s ease;
+  }
+  
+  .dashboard-content.collapsed {
+    margin-left: 50px; /* When sidebar is collapsed */
+  }
+  
+  .dashboard-content.expanded {
+    margin-left: 200px; /* When sidebar is expanded */
+  }

@@ -1,0 +1,16 @@
+.completedbtn{
+    background-color: #25bd35;
+    color: white;
+}
+.completedbtn:hover{
+    background: linear-gradient(#7eae83,#66b46e);
+}
+.titletext{
+    font-size: 25px;
+    margin: 0 0 10px;
+    color: #841ECC !important;
+  }
+.cert{
+    height: 200px;
+    width: 250px;
+}

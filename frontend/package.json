@@ -1,0 +1,91 @@
+{
+  "name": "lms",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@chakra-ui/react": "^2.8.2",
+    "@coreui/coreui": "^5.1.1",
+    "@coreui/react": "^5.3.0",
+    "@draft-js-plugins/buttons": "^4.3.3",
+    "@draft-js-plugins/editor": "^4.1.4",
+    "@draft-js-plugins/static-toolbar": "^4.1.4",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-brands-svg-icons": "^6.5.2",
+    "@fortawesome/free-regular-svg-icons": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@fullcalendar/core": "^6.1.15",
+    "@fullcalendar/daygrid": "^6.1.15",
+    "@fullcalendar/react": "^6.1.15",
+    "@mui/joy": "^5.0.0-beta.48",
+    "@mui/material": "^6.1.1",
+    "@ramonak/react-progress-bar": "^5.3.0",
+    "@stripe/react-stripe-js": "^2.8.0",
+    "@stripe/stripe-js": "^4.5.0",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "aos": "^2.3.4",
+    "axios": "^1.7.2",
+    "bootstrap": "^5.3.3",
+    "chart.js": "^4.4.4",
+    "chartjs-plugin-datalabels": "^2.2.0",
+    "dompurify": "^3.1.6",
+    "draft-js": "^0.11.7",
+    "framer-motion": "^11.7.0",
+    "html-react-parser": "^5.1.15",
+    "jodit-react": "^4.1.2",
+    "mapbox-gl": "^3.7.0",
+    "moment": "^2.30.1",
+    "patternomaly": "^1.3.2",
+    "quill": "^2.0.2",
+    "react": "^18.3.1",
+    "react-bootstrap": "^2.10.4",
+    "react-chartjs-2": "^5.2.0",
+    "react-confetti": "^6.1.0",
+    "react-countup": "^6.5.3",
+    "react-datepicker": "^7.3.0",
+    "react-dom": "^18.3.1",
+    "react-dropdown-tree-select": "^2.8.0",
+    "react-icons": "^5.2.1",
+    "react-live": "^4.1.7",
+    "react-pro-sidebar": "^1.1.0",
+    "react-quill": "^2.0.0",
+    "react-router-dom": "^6.24.1",
+    "react-scripts": "5.0.1",
+    "react-scroll": "^1.9.0",
+    "react-toastify": "^10.0.5",
+    "react-tooltip": "^5.28.0",
+    "reactstrap": "^9.2.2",
+    "three": "^0.167.1",
+    "vanta": "^0.5.24",
+    "web-vitals": "^2.1.4",
+    "xlsx": "^0.18.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

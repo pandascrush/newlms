@@ -1,0 +1,16 @@
+.orangebtn{
+    background-color: orange;
+    color: white;
+  }
+  .orangebtn:hover{
+    background-color: orange;
+    color: white;
+    transform: scale(1.1,1.1);
+  }
+  .txtprogress{
+    font-size: 12px;
+  }
+  .shwd {
+    box-shadow: 0 4px 8px rgba(150, 5, 202, 0.1), 0 6px 20px rgba(75, 7, 57, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+  }

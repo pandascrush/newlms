@@ -1,0 +1,99 @@
+.coursebtn{
+    color: #fff;
+    background-color: #841ECC;
+    border-radius: 25px;
+    border: 0px;
+    padding: 10px;
+    font-weight: 600;
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    margin: 0 auto;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 25px 0 0 25px;
+  }
+  
+  .search-button {
+    background: none;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 25px 25px 0;
+  }
+  
+  .search-button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .search-button svg {
+    color: #888;
+    width: 20px;
+    height: 20px;
+  }
+
+  .bannerheading{
+    font-size: 60px;
+    font-weight: bold;
+  }
+
+  @keyframes rotateY {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+  
+  .ic {
+    display: inline-block; /* Ensure the element can be rotated independently */
+    animation: rotateY 2s linear ;
+    color: #841ECC !important; 
+  }
+  .banner-image{
+    height: 600px;
+  }
+@media (max-width:768px){
+  .banner-image{
+    height: 300px;
+  }
+  .subjectimg{
+    height: 300px;
+   
+  }
+  .imparts{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (min-width:769px) and (max-width:1200px){
+  .banner-image{
+    height: 400px;
+  }
+  .subjectimg{
+    height: 400px; 
+  }
+  p{
+    font-size: 40px;
+  }
+  
+}
+ 
+
+ 

@@ -1,0 +1,64 @@
+/* Toolbar styles */
+#toolbar {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 5px;
+    background-color: #f3f3f3;
+  }
+  
+  .ql-formats {
+    margin-right: 10px;
+  }
+  
+  .ql-formats button {
+    border: none;
+    background: none;
+    padding: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .ql-formats button:hover {
+    background-color: #ddd;
+  }
+  /* Toolbar styles */
+#toolbar {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 5px;
+  background-color: #f3f3f3;
+}
+
+.ql-formats {
+  margin-right: 10px;
+}
+
+.ql-formats button,
+.ql-formats select {
+  border: none;
+  background: none;
+  padding: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.ql-formats button:hover,
+.ql-formats select:hover {
+  background-color: #ddd;
+}
+
+.uploadim{
+  border: 2px dashed violet;
+}
+.impart{
+  height: 100px;
+  width :100px;
+  border-radius: 50%;
+  background-color: rgb(238, 133, 226);
+  box-shadow: 2px 4px 3px pink;
+  padding: 10px;
+}
+
+  

@@ -1,0 +1,41 @@
+
+
+.bannercrd {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    margin: 10px;
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+  }
+  
+  .card-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-text {
+    font-size: 16px;
+  }
+  
+  
+  
+  
+  .coursebgcolour{
+    background-color: #BF75F4;
+  }
+  .coursetext{
+color: #BF75F4;
+text-align: left;
+  }
+  .coursebutton{
+    border-radius: 10px;
+    background-color: #0D6DFE;
+    color: white;
+    border: 0px;
+    padding: 10px;
+  }

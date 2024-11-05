@@ -1,0 +1,15 @@
+/* src/Components/Dashboard/Dashboard.css */
+#wrapper {
+    display: flex;
+    width: 100%;
+  }
+  
+  #sidebar-wrapper {
+    width: 250px;
+  }
+  
+  #page-content-wrapper {
+    flex: 1;
+    padding: 20px;
+  }
+  

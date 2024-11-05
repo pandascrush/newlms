@@ -1,0 +1,33 @@
+.map-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .map {
+    width: 70%;
+    height: 100%;
+  }
+  
+  .locations-list {
+    width: 30%;
+    padding: 20px;
+    overflow-y: auto;
+    background: #f8f9fa;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    cursor: pointer;
+    font-size: 18px;
+    margin: 15px 0;
+  }
+  
+  p {
+    font-size: 16px;
+    margin: 5px 0 15px 0;
+  }
+  

@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+.navbar-brand {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.nav-icon {
+  color: white;
+  margin-left: 15px;
+  font-size: 1.2rem;
+}
+
+.input-group {
+  max-width: 300px;
+}
+
+.input-group .form-control {
+  border-radius: 0;
+}
+
+@media (max-width: 991px) {
+  .input-group {
+    width: 100%;
+  }
+}
+
+.navpart {
+  border-radius: 22px;
+  color: #2f3047 !important;
+  margin: 0px 5px;
+  font-size: 18px !important;
+  line-height: 21.94px;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+}
+
+
+.imglogin {
+  height: 32px;
+  width: 32px;
+}
+
+.navpart {
+  font-weight: 500;
+  font-size: 18px !important;
+}
+
+.searchinput {
+  outline: none;
+  box-shadow: none;
+}
+
+.searchinput:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.search-icon {
+  color: #888888;
+  font-size: 20px;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+.searchinput::placeholder {
+  color: #ada9a9;
+  opacity: 1;
+  padding: 0px 7px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  padding: 14px 20px !important;
+}
+
+.navbarcontenttext{
+  background-color: #001040;
+}
+.navpart{
+  color: white !important;
+}
+.navpart:hover{
+  color: #ffa200 !important;
+}
+
+
+
+
+
+@media (max-width: 992px) {
+  .search-bar {
+    order: -1; 
+    width: 100%;
+  }
+}
+.custom-dropdown-menu {
+  color: #001040 !important; 
+}
+
+.custom-dropdown-item {
+  color: #001040 !important; 
+}
+
+.custom-dropdown-item:hover {
+  background-color: rgba(0, 16, 64, 0.1);
+  color: #001040 !important; 
+}
+

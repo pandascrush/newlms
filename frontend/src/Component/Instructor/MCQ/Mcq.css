@@ -1,0 +1,11 @@
+.uploadim{
+    border: 2px dashed violet;
+}
+.impart{
+    height: 100px;
+    width :100px;
+    border-radius: 50%;
+    background-color: rgb(238, 133, 226);
+    box-shadow: 2px 4px 3px pink;
+    padding: 10px;
+}

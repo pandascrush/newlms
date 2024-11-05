@@ -1,0 +1,40 @@
+.quizpart{
+    background-color: #faf3ff !important;
+}
+
+.sidetext{
+    color: #6705AD;
+}
+
+.custom-progress-bar .progress-bar {
+    background-color: #5BB66B;    
+}
+.sidebartext{
+color: black;
+}
+
+.sidebartext:hover{
+    color: #6705AD;
+}
+
+.sideshadow:hover{
+    box-shadow: 1px 1px 1px 1px #E3E3E3;
+}
+
+.orangecircle{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 2px solid orange;
+}
+.numberclr{
+    color: #6705AD;
+}
+
+.rightcards{
+    border: 0px;
+    box-shadow: 1px 1px 1px 1px #E3E3E3;
+
+}
+
+

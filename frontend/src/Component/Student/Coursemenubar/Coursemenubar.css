@@ -1,0 +1,11 @@
+.hvr:hover{
+    /* background-color: blueviolet; */
+    color: blueviolet; 
+    font-weight: 600; 
+    transform: scale(1.2,1.2);
+    border-bottom: 1px solid blueviolet; 
+}
+.hvr{
+    color: black;
+    font-weight: 600; 
+}

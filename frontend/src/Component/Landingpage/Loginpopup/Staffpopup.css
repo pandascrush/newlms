@@ -1,0 +1,44 @@
+
+
+
+  
+  .orangebtn {
+    background-color: orange; 
+    color: white; 
+    padding: 10px 20px;  
+    cursor: pointer; 
+  }
+  
+  /* .icons-container {
+    display: flex; 
+    justify-content: space-around;
+    width: 100%; 
+  } */
+  
+  .icon-with-badge {
+    position: relative; /* Positioning context for the badge */
+    display: inline-block; /* Inline layout */
+  }
+  
+  .notification-icon, .message-icon {
+    font-size: 24px; /* Icon size */
+    color: #555; /* Icon color */
+  }
+  
+  .badge {
+    position: absolute; /* Position relative to the icon */
+    top: -10px; /* Adjust position */
+    right: -10px; /* Adjust position */
+    background-color: red; /* Badge color */
+    color: white; /* Text color */
+    border-radius: 50%; /* Circle shape */
+    padding: 4px 8px; /* Padding inside the badge */
+    font-size: 12px; /* Font size */
+    font-weight: bold; /* Bold text */
+  }
+
+  .orgicon{
+    color: #F99420;
+    font-size: 40px;
+}
+  

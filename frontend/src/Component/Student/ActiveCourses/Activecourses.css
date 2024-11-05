@@ -1,0 +1,27 @@
+
+
+  .course-image {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 20px;
+  }
+  .orangebtn{
+    background-color: orange;
+    color: white;
+  }
+  .orangebtn:hover{
+    background-color: orange;
+    color: white;
+    transform: scale(1.1,1.1);
+  }
+
+  .titletext{
+    font-size: 25px;
+    margin: 0 0 10px;
+    color: #841ECC;
+  }
+
+  .icntxt{
+    color: #841ECC !important;
+  }
+  

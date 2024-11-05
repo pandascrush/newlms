@@ -1,0 +1,17 @@
+.neftbtn{
+    background-color: #001040 !important;
+    padding: 10px !important;
+    color: #fff !important;
+    margin: 10px;
+}
+.neftbtn1{
+    border: 1px solid #001040 !important;
+    padding: 10px !important;
+    color: #001040 !important;
+    margin: 10px;
+}
+
+.btquantity{
+    background-color: #001040;
+    color: #fff;
+}

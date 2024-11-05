@@ -1,0 +1,101 @@
+.authortext {
+  color: #001040;
+  font-weight: 700;
+}
+.aboutDr {
+  text-align: justify;
+}
+.certimg{
+  height: 250px;
+  width: 300px;
+}
+.overviewcontent {
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.abtken {
+  font-weight: 500;
+}
+.secondpara {
+  text-align: justify;
+}
+.certificatecards {
+  /* background-color: #8DBCD4; */
+  background-color: #d4e6ef;
+  /* box-shadow: 1px 1px 5px 3px #4d89a7; */
+}
+
+.certifiedheading {
+  color: #001040;
+  font-weight: 700;
+}
+.imp1{
+  min-height: 300px;
+  min-width: 400px;
+ 
+}
+.imparts{
+  height: 250px;
+  width: 300px;
+}
+.certificatecards ul li{
+  list-style-type: disc !important;
+}
+
+@media (max-width: 426px) {
+  .drimg {
+    max-height: 300px;
+    max-width: 250px;
+  }
+  .imparts{
+    height: 200px;
+    width: 230px;
+  }
+  .imparts1{
+    height: 300px;
+    width: 460px;
+  }
+  /* .imp1{
+    height: 250px;
+  }
+   */
+.imgcertificate{
+  max-height: 200px;
+  max-width: 250px;
+}
+}
+
+li::marker {
+  color: #001040;
+  font-size: 20px;
+}
+
+ul li {
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.imgcertificate{
+  max-height: 300px;
+  max-width: 350px;
+}
+
+.im3{
+  height: 200px;
+}
+
+.beating-icon {
+  animation: beat 1s infinite;
+  color: yellow;
+  font-size: 20px;
+}
+
+@keyframes beat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+

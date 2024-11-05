@@ -1,0 +1,170 @@
+.txtclr{
+    color: #001040;
+    font-weight: 600;
+    font-size: 20px !important;  
+}
+
+.bolderheading{
+font-weight: 600;
+}
+
+.storytext{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.8rem;
+    text-align: justify;
+}
+
+.storypart{
+    padding: 0px 0px;
+}
+
+@media (max-width:425px){
+    
+    .storytext{
+        text-align: justify;
+    }
+}
+
+@media (min-width:426px){
+    .storypart{
+        padding: 0px 100px;
+    }
+}
+
+.unique-story-container {
+    padding: 20px;
+    text-align: justify;
+  }
+  
+  .unique-story-header {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .unique-left-btn,
+  .unique-right-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #001040;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .unique-left-btn.active,
+  .unique-right-btn.active {
+
+  background-image: linear-gradient(45deg,#ffa200,#e5a943);
+    color: #fff !important;
+    border: none;
+    box-shadow: none;
+  }
+  
+  .unique-story-content {
+    margin-top: 20px;
+  }
+  
+  .unique-story-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .unique-story-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .unique-story-text {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+
+
+
+   /* Active Button Styling */
+.unique-left-btn.active,
+.unique-right-btn.active {
+  background-image: linear-gradient(45deg, #130d4b, #001040);
+  color: #fff !important;
+  border: none;
+  box-shadow: none;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.5s ease, transform 0.3s ease;
+}
+
+.unique-left-btn.active::after,
+.unique-right-btn.active::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(198, 232, 87, 0.5), transparent);
+  animation: pulseEffect 2s infinite;
+  z-index: 0;
+}
+
+
+@keyframes pulseEffect {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+}
+
+
+.unique-left-btn.active,
+.unique-right-btn.active {
+  transform: scale(1.05);
+} 
+
+
+
+/* 
+.unique-left-btn,
+.unique-right-btn {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  background-color: #333; 
+  border: none;
+  z-index: 1;
+}
+
+.unique-left-btn.active,
+.unique-right-btn.active {
+  background-color: transparent;
+  color: #fff !important;
+}
+
+
+.unique-left-btn.active::before,
+.unique-right-btn.active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(45deg, #ffa200, #e5a943);
+  transition: width 0.5s ease;
+  z-index: -1;
+}
+
+
+.unique-left-btn.active,
+.unique-right-btn.active:hover::before {
+  width: 100%;
+} */

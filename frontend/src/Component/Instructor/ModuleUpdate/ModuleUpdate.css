@@ -1,0 +1,79 @@
+/* ModuleUpdate.css */
+
+.module-update-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+ 
+  border-radius: 8px;
+  
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f6f7f8; 
+    border: 0px;
+}
+
+.module2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+.modulelabel {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+.selectbox,
+.inp1 {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.updatebtn {
+  padding: 12px;
+  background-color: #001040;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .module-update-container {
+    padding: 15px;
+  }
+
+  .module2 {
+    font-size: 20px;
+  }
+
+  .updatebtn {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .module-update-container {
+    padding: 10px;
+  }
+
+  .module2 {
+    font-size: 18px;
+  }
+
+  .updatebtn {
+    font-size: 14px;
+  }
+}

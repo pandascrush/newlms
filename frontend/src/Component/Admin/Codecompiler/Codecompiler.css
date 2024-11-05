@@ -1,0 +1,50 @@
+.editor-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
+  .code-editor {
+    width: 600px;
+    height: 300px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-family: monospace;
+  }
+  
+  .run-button {
+    background-color: #6a1b9a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    box-shadow: 0 5px #4e1380;
+  }
+  
+  .run-button:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px #4e1380;
+  }
+  
+  .output {
+    width: 600px;
+    min-height: 50px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    white-space: pre-wrap;
+    background-color: #f9f9f9;
+    font-family: monospace;
+  }
+  
+  .error {
+    color: red;
+    margin-top: 10px;
+  }
+  

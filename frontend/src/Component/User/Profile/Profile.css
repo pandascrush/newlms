@@ -1,0 +1,170 @@
+.card1 {
+  background-color: #fff;
+  border-radius: 23px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* padding: 2rem !important; */
+}
+.setrow {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.imgsiz {
+  width: 10%;
+  height: 10%;
+}
+
+/* Profile.css */
+
+.h-screen {
+  min-height: 100vh;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.overflow-y-lg-auto {
+  overflow-y: auto;
+}
+
+.card1 {
+  border-radius: 10px;
+  padding: 20px;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  box-shadow: 5px 5px 15px #bebebe, -5px -5px 15px #ffffff;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  color: #8f231b;
+}
+
+.card-body {
+  padding: 30px;
+}
+
+.card-user-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.text-muted {
+  color: green !important;
+}
+
+.setrow {
+  margin-top: 20px;
+}
+
+.bar-container {
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.progress-bar-container {
+  margin-top: 15px;
+}
+
+.progress-bar-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.react-datepicker-wrapper {
+  display: inline-block;
+}
+
+.form-control-datepicker {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.calendar-container {
+  margin-top: 40px;
+}
+
+.fc-event {
+  background-color: #8f231b !important;
+  color: white;
+}
+
+.header-title {
+  font-size: 2rem;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #8f231b;
+  text-align: center;
+}
+
+.title-highlight {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.container-fluid {
+  padding: 15px;
+}
+
+.module-progress-container {
+  margin-top: 30px;
+}
+
+.module-progress-bar {
+  margin-top: 15px;
+}
+
+.module-progress-title {
+  font-size: 1.2rem;
+  color: #8f231b;
+  font-weight: bold;
+}
+
+.fullcalendar-container {
+  margin-top: 30px;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+}
+
+.profile-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.ms-3 {
+  margin-left: 1rem;
+}
+
+.react-progress-bar .label {
+  display: none;
+}
+
+.react-progress-bar:hover .label {
+  display: block;
+  color: #000;
+  font-weight: bold;
+}
+
+.edit-profile-container {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.edit-profile-heading {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+
+
+
