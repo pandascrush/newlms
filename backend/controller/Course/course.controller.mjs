@@ -2,6 +2,195 @@ import db from "../../config/db.config.mjs";
 import transporter from "../../config/email.config.mjs";
 import path from "path";
 
+export const addPrerequisite = (req, res) => {
+  const { prerequisite_text } = req.body;
+
+  // Check if prerequisite_text is provided
+  if (!prerequisite_text) {
+    return res.json({ message: "Prerequisite text is required" });
+  }
+
+  // Insert query to add the prerequisite text to the learner_prerequisites table
+  const query =
+    "INSERT INTO learner_prerequisites (prerequisite_text) VALUES (?)";
+
+  db.query(query, [prerequisite_text], (error, results) => {
+    if (error) {
+      console.error("Error inserting prerequisite:", error);
+      return res.json({
+        message: "Failed to add prerequisite",
+        error: error.message,
+      });
+    }
+
+    // Send success response
+    res.json({
+      message: "Prerequisite added successfully",
+      id: results.insertId,
+    });
+  });
+};
+
+export const getPrerequisites = (req, res) => {
+  // Query to select all prerequisites
+  const query = "SELECT * FROM learner_prerequisites";
+
+  db.query(query, (error, results) => {
+    if (error) {
+      console.error("Error fetching prerequisites:", error);
+      return res.json({
+        message: "Failed to retrieve prerequisites",
+        error: error.message,
+      });
+    }
+
+    // Send the retrieved prerequisites as a response
+    res.json({
+      message: "Prerequisites retrieved successfully",
+      prerequisites: results,
+    });
+  });
+};
+
+export const addLearningObjective = (req, res) => {
+  const { objective_text } = req.body;
+
+  if (!objective_text) {
+    return res.json({ message: "Objective text is required" });
+  }
+
+  // SQL query to insert a new learning objective
+  const query = "INSERT INTO learning_objectives (objective_text) VALUES (?)";
+
+  db.query(query, [objective_text], (error, results) => {
+    if (error) {
+      console.error("Error adding learning objective:", error);
+      return res.json({
+        message: "Failed to add learning objective",
+        error: error.message,
+      });
+    }
+
+    res.json({
+      message: "Learning objective added successfully",
+      objectiveId: results.insertId,
+      objective_text: objective_text,
+    });
+  });
+};
+
+export const getLearningObjectives = (req, res) => {
+  // SQL query to fetch all learning objectives
+  const query = "SELECT * FROM learning_objectives";
+
+  db.query(query, (error, results) => {
+    if (error) {
+      console.error("Error fetching learning objectives:", error);
+      return res.json({
+        message: "Failed to retrieve learning objectives",
+        error: error.message,
+      });
+    }
+
+    res.json({
+      message: "Learning objectives retrieved successfully",
+      learningObjectives: results,
+    });
+  });
+};
+
+export const addLearningOutcome = (req, res) => {
+  const { outcome_text } = req.body; // Get outcome text from the request body
+
+  if (!outcome_text) {
+    return res.json({ message: "Outcome text is required" });
+  }
+
+  // SQL query to insert a new learning outcome
+  const query = "INSERT INTO learning_outcomes (outcome_text) VALUES (?)";
+
+  db.query(query, [outcome_text], (error, results) => {
+    if (error) {
+      console.error("Error inserting learning outcome:", error);
+      return res.json({
+        message: "Failed to add learning outcome",
+        error: error.message,
+      });
+    }
+
+    res.json({
+      message: "Learning outcome added successfully",
+      outcomeId: results.insertId,
+    });
+  });
+};
+
+export const getLearningOutcomes = (req, res) => {
+  // SQL query to select all outcomes
+  const query = "SELECT * FROM learning_outcomes";
+
+  db.query(query, (error, results) => {
+    if (error) {
+      console.error("Error fetching learning outcomes:", error);
+      return res.json({
+        message: "Failed to retrieve learning outcomes",
+        error: error.message,
+      });
+    }
+
+    res.json({
+      message: "Learning outcomes retrieved successfully",
+      outcomes: results,
+    });
+  });
+};
+
+export const getLearnerGroup = (req, res) => {
+  const query = "SELECT * FROM learner_group";
+
+  db.query(query, (error, results) => {
+    if (error) {
+      console.error("Error fetching learning outcomes:", error);
+      return res.json({
+        message: "Failed to retrieve learning outcomes",
+        error: error.message,
+      });
+    }
+
+    res.json({
+      message: "Learning outcomes retrieved successfully",
+      learner_group: results,
+    });
+  });
+};
+
+export const addLearnerGroup = (req, res) => {
+  const { learner_group_text } = req.body; // Get outcome text from the request body
+
+  if (!outcome_text) {
+    return res.json({ message: "Outcome text is required" });
+  }
+
+  // SQL query to insert a new learning outcome
+  const query = "INSERT INTO learner_group (learner_group_level) VALUES (?)";
+
+  db.query(query, [learner_group_text], (error, results) => {
+    if (error) {
+      console.error("Error inserting learning outcome:", error);
+      return res.json({
+        message: "Failed to add learning group",
+        error: error.message,
+      });
+    }
+
+    res.json({
+      message: "Learning outcome added successfully",
+      learnergroupid: results.insertId,
+    });
+  });
+};
+
+// --------------------------------------------
 export const addCourse = (req, res) => {
   const {
     courseFullName,
@@ -9,7 +198,11 @@ export const addCourse = (req, res) => {
     courseStartDate,
     courseEndDate,
     courseDescription,
-    courseCategoryId, // Assuming this is course_category_id
+    courseCategoryId,
+    selectedObjectiveIds,     // Updated field
+    selectedOutcomeIds,       // Updated field
+    selectedPrerequisiteIds,  // Updated field
+    selectedLearnergroupIds   // Updated field
   } = req.body;
 
   try {
@@ -30,10 +223,16 @@ export const addCourse = (req, res) => {
       return res.json({ message: "All fields are required." });
     }
 
+    // Convert JSON strings to arrays if necessary
+    const objectiveIds = JSON.parse(selectedObjectiveIds || "[]");
+    const outcomeIds = JSON.parse(selectedOutcomeIds || "[]");
+    const prerequisiteIds = JSON.parse(selectedPrerequisiteIds || "[]");
+    const learnerGroupIds = JSON.parse(selectedLearnergroupIds || "[]");
+
     // Insert the new course into the courses table
     db.query(
-      `INSERT INTO courses (coursename, course_short_name, course_start_date, course_end_date, course_image, course_desc, course_category_id) 
-           VALUES (?, ?, ?, ?, ?, ?, ?)`,
+      `INSERT INTO courses (coursename, course_short_name, course_start_date, course_end_date, course_image, course_desc, course_category_id, objectiveid, outcomeid, prerequisiteid, learnergroupid) 
+           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       [
         courseFullName,
         courseShortName,
@@ -42,6 +241,10 @@ export const addCourse = (req, res) => {
         courseImage,
         courseDescription,
         courseCategoryId,
+        JSON.stringify(objectiveIds),     // Store as JSON
+        JSON.stringify(outcomeIds),       // Store as JSON
+        JSON.stringify(prerequisiteIds),  // Store as JSON
+        JSON.stringify(learnerGroupIds)   // Store as JSON
       ],
       (err, result) => {
         if (err) {
@@ -73,9 +276,7 @@ export const addCourse = (req, res) => {
             }
 
             // Successful response
-            res
-              .status(200)
-              .json({ message: "Course and context added successfully" });
+            res.json({ message: "Course and context added successfully" });
           }
         );
       }
@@ -85,6 +286,7 @@ export const addCourse = (req, res) => {
     res.status(500).json({ message: "catch error" });
   }
 };
+
 
 export const getAllCourses = (req, res) => {
   const query = `
@@ -134,7 +336,7 @@ export const getAllCourses = (req, res) => {
       created_at: course.created_at,
       module_count: course.module_count,
       enrolled_user_count: course.enrolled_user_count,
-      completed_user_count: course.completed_user_count // Users who completed all 18 modules
+      completed_user_count: course.completed_user_count, // Users who completed all 18 modules
     }));
 
     res.json(courses);
@@ -372,7 +574,9 @@ export const updateModuleImage = (req, res) => {
   const moduleImage = req.file;
 
   // Generate the file path for storing in the database
-  const moduleImagePath = moduleImage ? path.join('/uploads', moduleImage.filename) : null;
+  const moduleImagePath = moduleImage
+    ? path.join("/uploads", moduleImage.filename)
+    : null;
 
   if (!moduleImagePath) {
     return res.json({ message: "Module image file is required" });

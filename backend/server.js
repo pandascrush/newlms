@@ -11,8 +11,9 @@ import userRouter from "./routes/User/user.routes.mjs";
 import cookieParser from "cookie-parser";
 import paymentRouter from "./routes/Payment/payment.routes.mjs";
 import adminRouter from "./routes/admin/admin.routes.mjs";
-import superAdminRouter from './routes/superadmin/superadmin.routes.mjs'
+import superAdminRouter from "./routes/superadmin/superadmin.routes.mjs";
 import Stripe from "stripe";
+import nlp from "compromise";
 
 //stripe
 const stripe = new Stripe(process.env.STRIPE_PRIVATE_KEY);
@@ -22,8 +23,8 @@ const app = express();
 const port = process.env.PORT;
 
 app.use(cookieParser());
-app.use(express.json({ limit: '50mb' }));
-app.use(express.urlencoded({ limit: '50mb', extended: true }));
+app.use(express.json({ limit: "50mb" }));
+app.use(express.urlencoded({ limit: "50mb", extended: true }));
 // app.use(express.urlencoded({ extended: true }));
 // app.use(bodyParser.json());
 app.use(
@@ -40,14 +41,13 @@ app.use("/quiz", quizRouter);
 app.use("/user", userRouter);
 app.use("/payment", paymentRouter);
 app.use("/admin", adminRouter);
-app.use("/superadmin",superAdminRouter)
+app.use("/superadmin", superAdminRouter);
 app.use("/uploads", express.static("uploads"));
 
 // Test rout
 app.get("/api/test", (req, res) => {
   res.json({ msg: "hello world" });
 });
-
 
 let endpointSecret;
 app.post(
@@ -142,6 +142,27 @@ app.post(
     res.status(200).send("Webhook event received").end();
   }
 );
+
+app.post("/analyze", (req, res) => {
+  const { text } = req.body; // Get text data from the request body
+
+  if (!text) {
+    return res.json({ message: "Text is required" });
+  }
+
+  // Use compromise to process the text
+  const doc = nlp(text);
+
+  // Extract nouns and verbs
+  const nouns = doc.nouns().out("array");
+  const verbs = doc.verbs().out("array");
+
+  // Return results to the client
+  res.json({
+    nouns,
+    verbs,
+  });
+});
 
 // Start server
 app.listen(`${process.env.PORT}`, () => {

@@ -90,23 +90,23 @@ function ModuleUpdate() {
     // console.log(formData);
 
     try {
-      axios.put(
-        `${process.env.REACT_APP_API_URL}course/${selectedImageModuleId}/image`,
-        formData,
-        {
-          headers: { "Content-Type": "multipart/form-data" },
-        }
-      ).then(res=>{
-        if(res.data.message === "Module image updated successfully"){
-          toast.success("Module image updated successfully")
-        }
-        else if(res.data.message === "Server error"){
-          toast.error("Server error")
-        }
-        else if(res.data.message === "Module not found"){
-          toast.error("Module not found")
-        }
-      })
+      axios
+        .put(
+          `${process.env.REACT_APP_API_URL}course/${selectedImageModuleId}/image`,
+          formData,
+          {
+            headers: { "Content-Type": "multipart/form-data" },
+          }
+        )
+        .then((res) => {
+          if (res.data.message === "Module image updated successfully") {
+            toast.success("Module image updated successfully");
+          } else if (res.data.message === "Server error") {
+            toast.error("Server error");
+          } else if (res.data.message === "Module not found") {
+            toast.error("Module not found");
+          }
+        });
     } catch (error) {
       console.error("Error updating module image:", error);
     }
@@ -182,9 +182,7 @@ function ModuleUpdate() {
             accept="image/*"
           />
         </div>
-
         <br />
-
         <button onClick={handleUpdateModuleImage} className="updatebtn">
           Update Module Image
         </button>

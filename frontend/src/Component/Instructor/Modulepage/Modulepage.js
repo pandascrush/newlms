@@ -6,7 +6,11 @@ import "./Modulepage.css";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Link, useParams } from "react-router-dom";
-
+import Checkbox from '@mui/material/Checkbox';
+import TextField from '@mui/material/TextField';
+import Autocomplete from '@mui/material/Autocomplete';
+import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
+import CheckBoxIcon from '@mui/icons-material/CheckBox';
 function Modulepage() {
   const [textareas, setTextareas] = useState([""]);
   const [selected, setSelected] = useState([]);
@@ -18,8 +22,31 @@ function Modulepage() {
   const [moduleStructure, setModuleStructure] = useState({});
   const [selectedModuleId, setSelectedModuleId] = useState("");
   const [selectedFile, setSelectedFile] = useState(null);
-
+  const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
+  const checkedIcon = <CheckBoxIcon fontSize="small" />;
   const { id } = useParams();
+
+  const top100Films = [
+    { title: 'The Shawshank Redemption', year: 1994 },
+    { title: 'The Godfather', year: 1972 },
+    { title: 'The Godfather: Part II', year: 1974 },
+    { title: 'The Dark Knight', year: 2008 },
+    { title: '12 Angry Men', year: 1957 },
+    { title: "Schindler's List", year: 1993 },
+    { title: 'Pulp Fiction', year: 1994 },
+    {
+      title: 'The Lord of the Rings: The Return of the King',
+      year: 2003,
+    },
+    { title: 'The Good, the Bad and the Ugly', year: 1966 },
+    { title: 'Fight Club', year: 1999 },
+    {
+      title: 'The Lord of the Rings: The Fellowship of the Ring',
+      year: 2001,
+    },
+    
+    
+  ];
 
   useEffect(() => {
     axios
@@ -254,43 +281,50 @@ function Modulepage() {
   };
 
   return (
-    <>
-      <h3 className="violettext text-center my-2">Welcome to Course Module</h3>
-      <div className="container modpart p-3 rounded-2">
-        <h6>Select the Course</h6>
-        <DropdownTreeSelect
+   
+
+    <div className="container-fluid p-0">
+      <h3 className="violettext text-center my-2">Course Module Creation</h3>
+      <div className="modpart p-3 rounded-2">
+       
+      
+        <div>
+          
+          <form onSubmit={handleSubmit}>
+            <div className="form-group">
+              <div className="form-group-inner">
+<label className="labeltext">Select the course</label>
+<DropdownTreeSelect
           data={courses}
           onChange={handleChange}
-          className="bootstrap-demo"
+          className="bootstrap-demo w-100"
           texts={{ placeholder: "Select..." }}
-          value={selectedNode ? [selectedNode] : []}
-        />
+          value={selectedNode ? [selectedNode] : []} />
         <ToastContainer />
-        <div className="col-md-6">
-          <h4 className="violettext my-2">Add New Module</h4>
-          <form onSubmit={handleSubmit}>
-            {textareas.map((textarea, index) => (
-              <div key={index} className="my-2">
-                <textarea
-                  rows="3"
-                  value={textarea}
-                  onChange={(e) => handleTextareaChange(index, e.target.value)}
-                  className="form-control"
-                  placeholder={`Enter Module Name ${index + 1}`}
-                />
-                {/* {index === textareas.length - 1 && (
-                  <button
-                    type="button"
-                    className="subbtn mt-2 btn-sm"
-                    onClick={addTextarea}
-                  >
-                    Add Another Module
-                  </button>
-                )} */}
               </div>
-            ))}
-            <div className="my-2">
-              <label htmlFor="moduleImage" className="form-label violettext">
+            </div>
+
+            <div className="form-group">
+              <div className="form-group-inner">
+            <label className="labeltext my-2">Add New Module</label>
+           
+            {textareas.map((textarea, index) => (
+  <div key={index} className="my-2 w-100">
+    <input
+      type="text"
+      className="form-control w-100"
+      value={textarea}
+      onChange={(e) => handleTextareaChange(index, e.target.value)}
+      placeholder={`Enter Module Name ${index + 1}`}
+    />
+  </div>
+))}
+
+              </div>
+              </div>
+              <div className="form-group">
+            <div className="form-group-inner my-2">
+              <label htmlFor="moduleImage" className="labeltext">
                 Module Image
               </label>
               <input
@@ -300,14 +334,114 @@ function Modulepage() {
                 onChange={handleFileChange}
               />
             </div>
+            </div>
+
+
+<div className="form-group">
+  <div className="form-group-inner my-2">
+  <label htmlFor="moduleImage" className="labeltext">Learning Objective</label>
+  <Autocomplete
+      multiple
+      id="checkboxes-tags-demo"
+      options={top100Films}
+      disableCloseOnSelect
+      getOptionLabel={(option) => option.title}
+      renderOption={(props, option, { selected }) => {
+        const { key, ...optionProps } = props;
+        return (
+          <li key={key} {...optionProps}>
+            <Checkbox
+              icon={icon}
+              checkedIcon={checkedIcon}
+              style={{ marginRight: 8 }}
+              checked={selected}
+            />
+            {option.title}
+          </li>
+        );
+      }}
+      className="autocomplete-responsive w-100"
+      renderInput={(params) => (
+        <TextField {...params}  placeholder="Select Learning Objective" />
+      )}
+    />
+  </div>
+</div>
+
+<div className="form-group">
+  <div className="form-group-inner my-2">
+  <label htmlFor="moduleImage" className="labeltext">Learner Outcomes</label>
+  <Autocomplete
+      multiple
+      id="checkboxes-tags-demo"
+      options={top100Films}
+      disableCloseOnSelect
+      getOptionLabel={(option) => option.title}
+      renderOption={(props, option, { selected }) => {
+        const { key, ...optionProps } = props;
+        return (
+          <li key={key} {...optionProps}>
+            <Checkbox
+              icon={icon}
+              checkedIcon={checkedIcon}
+              style={{ marginRight: 8 }}
+              checked={selected}
+            />
+            {option.title}
+          </li>
+        );
+      }}
+      className="autocomplete-responsive w-100"
+      renderInput={(params) => (
+        <TextField {...params}  placeholder="Select Learner Outcomes" />
+      )}
+    />
+  </div>
+</div>
+
+<div className="form-group">
+  <div className="form-group-inner my-2">
+  <label htmlFor="moduleImage" className="labeltext">Learner Group</label>
+  <Autocomplete
+      multiple
+      id="checkboxes-tags-demo"
+      options={top100Films}
+      disableCloseOnSelect
+      getOptionLabel={(option) => option.title}
+      renderOption={(props, option, { selected }) => {
+        const { key, ...optionProps } = props;
+        return (
+          <li key={key} {...optionProps}>
+            <Checkbox
+              icon={icon}
+              checkedIcon={checkedIcon}
+              style={{ marginRight: 8 }}
+              checked={selected}
+            />
+            {option.title}
+          </li>
+        );
+      }}
+      className="autocomplete-responsive w-100"
+      renderInput={(params) => (
+        <TextField {...params}  placeholder="Select Learner Group" />
+      )}
+    />
+  </div>
+</div>
+<div className="d-flex justify-content-end">
             <button type="submit" className="subbtn my-2">
               Submit
             </button>
+            </div>
           </form>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
 export default Modulepage;
+
+
+

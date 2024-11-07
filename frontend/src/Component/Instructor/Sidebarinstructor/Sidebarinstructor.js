@@ -30,24 +30,24 @@ function Sidebarinstructor({ isOpen, toggleSidebar }) {
 
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const verifyToken = async () => {
-      try {
-        const response = await axios.get(
-          `${process.env.REACT_APP_API_URL}auth/protected`,
-          {
-            withCredentials: true,
-          }
-        );
-        console.log("Token is valid:", response.data);
-      } catch (error) {
-        console.error("Token verification error:", error);
-        navigate("/login");
-      }
-    };
+  // useEffect(() => {
+  //   const verifyToken = async () => {
+  //     try {
+  //       const response = await axios.get(
+  //         `${process.env.REACT_APP_API_URL}auth/protected`,
+  //         {
+  //           withCredentials: true,
+  //         }
+  //       );
+  //       console.log("Token is valid:", response.data);
+  //     } catch (error) {
+  //       console.error("Token verification error:", error);
+  //       navigate("/login");
+  //     }
+  //   };
 
-    verifyToken();
-  }, [navigate]);
+  //   verifyToken();
+  // }, [navigate]);
 
   const handleLogout = async () => {
     try {
